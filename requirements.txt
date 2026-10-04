@@ -1,0 +1,14 @@
+numpy
+scipy
+pandas
+matplotlib
+numba
+scikit-image
+laserbeamsize
+jupyterlab
+ipykernel
+git+https://github.com/AlvaroMenduina/ZERN.git
+
+# Optional GPU acceleration:
+# install a CuPy package matching your CUDA version.
+# The code automatically falls back to CPU if CuPy/CUDA is unavailable.
