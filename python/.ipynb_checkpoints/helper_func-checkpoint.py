@@ -1767,6 +1767,10 @@ def far_field_to_time(
         Itt,
         axis=1,
     )
+    total_t = np.sum(Itt, axis=(0,1))  # shape: (Nw_pad,)
+    AA = np.sum(Ett, axis=(0,1))
+    phase = np.unwrap(np.angle(AA))
+
 
     print(f"Backend: {backend}")
 
@@ -1786,6 +1790,8 @@ def far_field_to_time(
 
         "A": A,
         "B": B,
+        "total_t":total_t,
+        "phase":phase,
 
         "Nx": Nx,
         "Ny": Ny,
