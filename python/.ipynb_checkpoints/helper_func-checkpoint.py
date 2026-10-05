@@ -1671,7 +1671,7 @@ def far_field_to_time(
 
         del E_t_gpu
 
-        clear_cupy_memory(cp)
+        clear_cupy_memory()
 
         backend = "GPU (CuPy)"
 
